@@ -12,6 +12,10 @@ dist
 dist-ssr
 *.local
 
+# Archivos comprimidos y de sistema
+*.zip
+desktop.ini
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
