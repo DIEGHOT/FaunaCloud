@@ -1,10 +1,24 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Card, Form } from "react-bootstrap";
 import CampoFormulario from "../molecules/CampoFormulario";
 import Boton from "../atoms/Boton";
 
 function FormularioLogin({ onLoginSubmit }) {
   const [credenciales, setCredenciales] = useState({ email: "", password: "" });
+
+  // Prueba de ciclo de vida: montaje y desmontaje.
+  // El arreglo de dependencias vacío [] le dice a React "ejecuta esto
+  // una sola vez, justo después del primer render (montaje)".
+  useEffect(() => {
+    console.log("el componente se montó");
+
+    // La función que se retorna aquí es la "cleanup function":
+    // React la ejecuta automáticamente justo antes de desmontar
+    // el componente (o antes de volver a ejecutar el efecto).
+    return () => {
+      console.log("el componente se desmontó");
+    };
+  }, []);
 
   const handleChange = (e) => {
     setCredenciales({
