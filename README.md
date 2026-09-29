@@ -1,3 +1,4 @@
+
 # Sistema de Gestión de Servicios Veterinarios
 
 Aplicación web desarrollada con **React + Vite** y **Bootstrap** para consultar el catálogo de servicios de una clínica veterinaria, solicitar citas y administrar los servicios mediante un CRUD.
