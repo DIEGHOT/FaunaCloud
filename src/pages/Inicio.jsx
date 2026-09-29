@@ -1,20 +1,27 @@
-import { Container, Row, Col, Card } from "react-bootstrap";
-import NavbarPrincipal from "../components/organisms/NavbarPrincipal";
+import { useServicios } from '../context/ServiciosContext';
+import { formatoMoneda } from '../utils/formatoMoneda';
 
-function Inicio() {
+export const Inicio = () => {
+  const { servicios } = useServicios(); // Usamos el nuevo hook
+
   return (
-    <>
-      <NavbarPrincipal />
-      <Container>
-        <Row>
-          <Col text="center" className="my-5 text-center">
-            <h1>Bienvenido al Proyecto</h1>
-            <p className="lead">Selecciona "Iniciar Sesión" en el menú para probar el componente responsivo.</p>
-          </Col>
-        </Row>
-      </Container>
-    </>
+    <main className="container py-4">
+      <h1 className="mb-4">Nuestros Servicios</h1>
+      <div className="row g-4">
+        {servicios.map((item) => (
+          <div key={item.id} className="col-12 col-md-6 col-lg-4">
+            <div className="card h-100 shadow-sm border-0">
+              <div className="card-body">
+                <h3 className="card-title h5 text-primary">{item.nombre}</h3>
+                <p className="card-text text-muted">{item.descripcion}</p>
+                <strong className="fs-5">{formatoMoneda(item.precio)}</strong>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </main>
   );
-}
+};
 
 export default Inicio;

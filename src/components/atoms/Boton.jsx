@@ -1,10 +1,9 @@
-function Boton({ texto, variante = "primary", tipo = "button", onClick, deshabilitado = false, className = "" }) {
+function Boton({ texto, onClick, tipo = 'button', variante = 'primary', className = '' }) {
   return (
     <button 
       type={tipo} 
-      className={`btn btn-${variante} w-100 ${className}`} 
-      onClick={onClick}
-      disabled={deshabilitado}
+      onClick={onClick} 
+      className={`btn btn-${variante} ${className}`}
     >
       {texto}
     </button>

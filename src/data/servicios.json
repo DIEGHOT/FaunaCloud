@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "nombre": "Mantenimiento Preventivo",
+    "descripcion": "Revisión completa y optimización del equipo.",
+    "precio": 25000,
+    "categoria": "Soporte"
+  },
+  {
+    "id": 2,
+    "nombre": "Desarrollo Web",
+    "descripcion": "Creación de sitio web a la medida.",
+    "precio": 150000,
+    "categoria": "Desarrollo"
+  },
+  {
+    "id": 3,
+    "nombre": "Consultoría IT",
+    "descripcion": "Asesoría profesional para proyectos tecnológicos.",
+    "precio": 45000,
+    "categoria": "Consultoría"
+  }
+]
