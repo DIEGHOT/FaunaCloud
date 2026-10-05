@@ -1,16 +1,17 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Inicio from "./pages/Inicio";
-import Login from "./pages/Login";
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { ServiciosProvider } from './context/ServiciosContext';
+import CatalogoServicios from './pages/CatalogoServicios';
 
-function App() {
+export default function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Inicio />} />
-        <Route path="/login" element={<Login />} />
-      </Routes>
-    </BrowserRouter>
+    <ServiciosProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<CatalogoServicios />} />
+          <Route path="/servicios" element={<CatalogoServicios />} />
+        </Routes>
+      </BrowserRouter>
+    </ServiciosProvider>
   );
 }
-
-export default App;

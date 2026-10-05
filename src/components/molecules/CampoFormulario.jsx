@@ -1,5 +1,5 @@
-import Etiqueta from "../atoms/Etiqueta";
-import InputTexto from "../atoms/InputTexto";
+import Etiqueta from "/atoms/Etiqueta";
+import InputTexto from "/atoms/InputTexto";
 
 function CampoFormulario({ etiqueta, tipo, placeholder, valor, onChange, nombre, requerido }) {
   return (
