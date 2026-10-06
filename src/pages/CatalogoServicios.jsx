@@ -1,5 +1,6 @@
 import React from 'react';
-import ListaServicios from '../components/organisms/ListaServicios';
+
+import ListaServicios from '../components/organisms/ListaServicios.jsx';
 
 export default function CatalogoServicios() {
   return (
