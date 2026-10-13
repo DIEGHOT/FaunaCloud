@@ -1,6 +1,10 @@
 import React from 'react';
+// 1. Importamos el hook de navegación
+import { useNavigate } from 'react-router-dom';
 
 export default function TarjetaServicio({ servicio }) {
+  const navigate = useNavigate(); // 2. Lo inicializamos
+
   return (
     <div className="card h-100 shadow-sm border-0">
       <div className="card-body d-flex flex-column">
@@ -15,7 +19,13 @@ export default function TarjetaServicio({ servicio }) {
           <span className="fs-5 fw-bold text-success">
             ${servicio.precio.toLocaleString('es-CL')}
           </span>
-          <button className="btn btn-outline-primary btn-sm">Ver detalle</button>
+          {/* 3. Conectamos el botón mandando el ID del servicio a la ruta */}
+          <button 
+            className="btn btn-outline-primary btn-sm"
+            onClick={() => navigate(`/servicio/${servicio.id}`)}
+          >
+            Ver detalle
+          </button>
         </div>
       </div>
     </div>
