@@ -6,12 +6,8 @@ function NavbarPrincipal() {
     <header>
       <Navbar bg="dark" variant="dark" expand="lg">
         <Container>
-          {/* Enlace al Inicio usando Link para que no recargue */}
           <Navbar.Brand as={Link} to="/">San Marcos</Navbar.Brand>
-          
-          {/* Este botón hace que el menú funcione en celulares */}
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
               <Nav.Link as={Link} to="/">Inicio</Nav.Link>

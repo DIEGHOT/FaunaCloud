@@ -1,6 +1,11 @@
 import { Container, Row, Col } from "react-bootstrap";
+// 1. Importamos tu nuevo hook
+import useTituloPagina from "../hooks/useTituloPagina.js";
 
 function Inicio() {
+  // 2. Lo llamamos aquí (siempre en el nivel superior de la función)
+  useTituloPagina("Inicio");
+
   return (
     <Container as="main">
       <Row>

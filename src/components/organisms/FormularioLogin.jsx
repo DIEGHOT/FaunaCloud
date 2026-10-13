@@ -1,30 +1,22 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-// Llamamos a las reglas de validación (que vamos a crear en el siguiente paso)
 import { validarEmail, validarClave } from '../../utils/validaciones.js';
 
 export default function FormularioLogin() {
   const navigate = useNavigate();
-
-  // 1. Aquí React guarda lo que escribes (esto lo hace un "componente controlado")
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  
-  // 2. Aquí guardamos los mensajes de error si te equivocas
   const [errores, setErrores] = useState({ email: '', password: '' });
 
   const manejarIngreso = (e) => {
-    e.preventDefault(); // Evita que la página parpadee o se reinicie
+    e.preventDefault();
     
-    // Revisamos si hay errores usando el archivo de validaciones
     const errorEmail = validarEmail(email);
     const errorPassword = validarClave(password);
 
-    // Guardamos los errores (si los hay) para que aparezcan en pantalla
     setErrores({ email: errorEmail, password: errorPassword });
 
-    // Si todo está impecable (no hay texto de error), ¡viajamos al catálogo!
-    if (errorEmail === '' && errorPassword === '') {
+    if (!errorEmail && !errorPassword) {
       navigate('/catalogo'); 
     }
   };
@@ -39,10 +31,9 @@ export default function FormularioLogin() {
           type="email" 
           className="form-control"
           value={email} 
-          onChange={(e) => setEmail(e.target.value)} // Se actualiza al teclear
+          onChange={(e) => setEmail(e.target.value)}
           placeholder="Ej: recepcion@sanmarcos.cl" 
         />
-        {/* Si hay error en el correo, aparece este texto en rojo */}
         {errores.email && <span className="text-danger small">{errores.email}</span>}
       </div>
 
@@ -52,10 +43,9 @@ export default function FormularioLogin() {
           type="password" 
           className="form-control"
           value={password} 
-          onChange={(e) => setPassword(e.target.value)} // Se actualiza al teclear
+          onChange={(e) => setPassword(e.target.value)}
           placeholder="Mínimo 6 caracteres" 
         />
-        {/* Si hay error en la clave, aparece este texto en rojo */}
         {errores.password && <span className="text-danger small">{errores.password}</span>}
       </div>
 
