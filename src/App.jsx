@@ -3,7 +3,7 @@ import NavbarPrincipal from './components/organisms/NavbarPrincipal.jsx';
 import Login from './pages/Login.jsx';
 import CatalogoServicios from './pages/CatalogoServicios.jsx';
 import DetalleServicio from './pages/DetalleServicio.jsx';
-// 1. Volvemos a importar el proveedor de tu contexto
+
 import { ServiciosProvider } from './context/ServiciosContext.jsx';
 
 function App() {

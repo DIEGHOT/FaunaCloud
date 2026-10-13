@@ -1,19 +1,20 @@
-import { Container, Row, Col, Card } from "react-bootstrap";
-import NavbarPrincipal from "../components/organisms/NavbarPrincipal";
+import { Container, Row, Col } from "react-bootstrap";
+// 1. Importamos tu nuevo hook
+import useTituloPagina from "../hooks/useTituloPagina.js";
 
 function Inicio() {
+  // 2. Lo llamamos aquí (siempre en el nivel superior de la función)
+  useTituloPagina("Inicio");
+
   return (
-    <>
-      <NavbarPrincipal />
-      <Container>
-        <Row>
-          <Col text="center" className="my-5 text-center">
-            <h1>Bienvenido al Proyecto</h1>
-            <p className="lead">Selecciona "Iniciar Sesión" en el menú para probar el componente responsivo.</p>
-          </Col>
-        </Row>
-      </Container>
-    </>
+    <Container as="main">
+      <Row>
+        <Col className="my-5 text-center">
+          <h1>Bienvenido a Veterinaria San Marcos</h1>
+          <p className="lead">Selecciona "Catálogo" o "Iniciar Sesión" en el menú para navegar sin recargar la página.</p>
+        </Col>
+      </Row>
+    </Container>
   );
 }
 
