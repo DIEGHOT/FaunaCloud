@@ -21,7 +21,14 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Inicio />} />
           <Route path="/catalogo" element={<CatalogoServicios />} />
+          
+          {/* NUEVO: Ruta con parámetro variable, requisito de la guía */}
+          <Route path="/servicio/:id" element={<CatalogoServicios />} />
+          
           <Route path="/login" element={<Login />} />
+          
+          {/* NUEVO: Ruta para cuando la página no existe */}
+          <Route path="*" element={<h2 style={{textAlign: "center", marginTop: "50px"}}>Página no encontrada</h2>} />
         </Routes>
       </BrowserRouter>
     </ServiciosProvider>
