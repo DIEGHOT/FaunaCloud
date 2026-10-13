@@ -26,4 +26,3 @@ export default function NavbarPrincipal() {
   );
 }
 
-export default NavbarPrincipal;
