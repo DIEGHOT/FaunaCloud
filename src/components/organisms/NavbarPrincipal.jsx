@@ -5,7 +5,7 @@ export default function NavbarPrincipal() {
   const navigate = useNavigate();
 
   const cerrarSesion = () => {
-    // Redirige de vuelta a la página de login
+    
     navigate('/login');
   };
 

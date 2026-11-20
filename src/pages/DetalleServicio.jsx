@@ -5,7 +5,7 @@ import { useServicios } from '../context/ServiciosContext.jsx';
 import { useTituloPagina } from '../hooks/useTituloPagina.js';
 
 export default function DetalleServicio() {
-  const { id } = useParams(); // Leemos el ID desde la ruta
+  const { id } = useParams(); 
   const navigate = useNavigate();
   const { servicios } = useServicios();
   
@@ -26,7 +26,7 @@ export default function DetalleServicio() {
     );
   }
 
-  // Si lo encuentra, mostramos los detalles:
+  
   return (
     <div className="container py-5">
       <div className="card shadow border-0 mx-auto" style={{ maxWidth: '600px' }}>
