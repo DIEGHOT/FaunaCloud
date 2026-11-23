@@ -34,6 +34,19 @@ El proyecto incluye pruebas automatizadas con Vitest.
 * Ejecutar las pruebas: `npm run test:run`
 * Generar el reporte de cobertura: `npm run test:cov`
 
+* # FaunaCloud - Frontend
+
+Aplicación web para la gestión de servicios veterinarios y solicitudes de atención clínica. Desarrollada en React + Vite.
+
+## Repositorio Relacionado
+* **Backend (API REST):** [https://github.com/DIEGHOT/faunacloud-backend](https://github.com/DIEGHOT/faunacloud-backend)
+
+## Requisitos e Instalación Local
+1. Clonar el repositorio:
+   ```bash
+   git clone [https://github.com/DIEGHOT/FaunaCloud.git](https://github.com/DIEGHOT/FaunaCloud.git)
+   cd FaunaCloud
+
 Actualización ERS - Versión 2
 El presente documento define los requerimientos, herramientas y propuestas necesarias para el desarrollo de la aplicación web de la Veterinaria San Marcos. Corresponde a la Versión 2  El proyecto consiste en una aplicación funcional de página única (SPA) desarrollada en React, que incluye un catálogo de servicios, gestión de datos (CRUD), navegación dinámica y formularios validados, respaldado por pruebas unitarias automatizadas.
 
