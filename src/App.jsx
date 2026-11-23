@@ -5,6 +5,7 @@ import CatalogoServicios from './pages/CatalogoServicios.jsx';
 import DetalleServicio from './pages/DetalleServicio.jsx';
 import CrearServicio from './pages/CrearServicio.jsx';
 import EditarServicio from './pages/EditarServicio.jsx';
+import GestionUsuarios from './pages/GestionUsuarios.jsx'; // <-- 1. NUEVA IMPORTACIÓN
 import RutaAdmin from './components/RutaAdmin.jsx';
 import { ServiciosProvider } from './context/ServiciosContext.jsx';
 
@@ -18,6 +19,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/catalogo" element={<CatalogoServicios />} />
           <Route path="/servicio/:id" element={<DetalleServicio />} />
+          
           {/* Rutas protegidas solo para administradores */}
           <Route 
             path="/crear-servicio" 
@@ -35,6 +37,17 @@ function App() {
               </RutaAdmin>
             } 
           />
+          
+          {/* <-- 2. NUEVA RUTA PROTEGIDA PARA EL CRUD DE USUARIOS --> */}
+          <Route 
+            path="/usuarios" 
+            element={
+              <RutaAdmin>
+                <GestionUsuarios />
+              </RutaAdmin>
+            } 
+          />
+
         </Routes>
       </BrowserRouter>
     </ServiciosProvider>
